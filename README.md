@@ -17,6 +17,8 @@ Build, debug, explain, and ship code faster with multiple state-of-the-art AI mo
 
 *A modern AI coding assistant designed for developers who live in the terminal.*
 
+![Ameer Code terminal home screen](./assets/ameer1.png)
+
 </div>
 
 ---
@@ -99,6 +101,10 @@ Thinking...
 
 ✔ Generated project successfully.
 ```
+
+Type `/` at any time to open the command menu:
+
+![Ameer Code slash command menu](./assets/ameer2.png)
 
 ---
 
@@ -346,6 +352,11 @@ It helps more developers discover the project and supports future development.
 
 ---
 
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
 
 <div align="center">
 
