@@ -34,11 +34,6 @@ export default function InputBar({ onSubmit, disabled = false }: Props) {
     setSelectedIndex,
   } = useCommandMenu();
 
-  const handleCommandExecute = useCallback((index: number)=>{
-    const command = resolveCommand(index)
-    handleCommand(command)
-  }, [])
-
   const handleTextareaContentChange = useCallback(() => {
     const textarea = textareaRef.current;
     if (!textarea) return;
@@ -59,7 +54,7 @@ export default function InputBar({ onSubmit, disabled = false }: Props) {
     (command: Command | undefined) => {
       const textarea = textareaRef.current;
       if (!textarea || !command) return;
-      
+
       if (command.action) {
         // For action commands, clear and execute
         textarea.setText("");
@@ -73,6 +68,14 @@ export default function InputBar({ onSubmit, disabled = false }: Props) {
       }
     },
     [renderer],
+  );
+
+  const handleCommandExecute = useCallback(
+    (index: number) => {
+      const command = resolveCommand(index);
+      handleCommand(command);
+    },
+    [resolveCommand, handleCommand],
   );
 
   useEffect(() => {
@@ -89,7 +92,7 @@ export default function InputBar({ onSubmit, disabled = false }: Props) {
     if (showCommandMenu) {
       const command = resolveCommand(selectedIndex);
       if (command) {
-        handleCommand(command);  // ✅ Execute the command
+        handleCommand(command); // ✅ Execute the command
       }
       return;
     }
@@ -118,12 +121,13 @@ export default function InputBar({ onSubmit, disabled = false }: Props) {
               backgroundColor="#1A1A2A"
               zIndex={10}
             >
-              <CommandMenu 
-              query= {commandQuery}
-              selectedIndex={selectedIndex}
-              scollRef={scrollRef}
-              onSelect={setSelectedIndex}
-              onExecute={handleCommandExecute}/>
+              <CommandMenu
+                query={commandQuery}
+                selectedIndex={selectedIndex}
+                scollRef={scrollRef}
+                onSelect={setSelectedIndex}
+                onExecute={handleCommandExecute}
+              />
             </box>
           )}
           <textarea
