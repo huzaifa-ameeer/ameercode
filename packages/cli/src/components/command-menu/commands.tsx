@@ -4,47 +4,93 @@ export const COMMANDS : Command[] =[
     {
         name: "new",
         description: "Start a new conversation",
-        value: "/new"
+        value: "/new",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Starting new converstion..."
+            })
+        }
     },
     {
         name: "usage",
         description: "Open billing portal in yoir browser",
-        value: "/usage"
+        value: "/usage",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Opening billing portal..."
+            })
+        }
     },
     {
         name: "upgrade",
         description: "Buy more credits",
-        value: "/upgrade"
+        value: "/upgrade",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Opening credits checkout..."
+            })
+        }
     },
     {
         name: "logout",
         description: "Sign out of your account",
-        value: "/logout"
+        value: "/logout",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Signed out",
+                variant: "success"
+            })
+        }
     },
     {
         name: "login",
         description: "Sign in with your browser",
-        value: "/login"
+        value: "/login",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Opening browser to sign in..."
+            })
+        }
     },
     {
         name: "theme",
         description: "Change color theme",
-        value: "/theme"
+        value: "/theme",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Opening theme picker..."
+            })
+        }
     },
     {
         name: "sessions",
         description: "Browse past sessions",
-        value: "/sessions"
+        value: "/sessions",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Loading sessions..."
+            })
+        }
     },
     {
         name: "models",
         description: "Select AI model for generation",
-        value: "/models"
+        value: "/models",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Selecting models..."
+            })
+        }
     },
     {
         name: "agents",
         description: "Switch agents",
-        value: "agents"
+        value: "agents",
+        action: (ctx)=>{
+            ctx.toast.show({
+                message: "Switching agents..."
+            })
+        }
     },
     {
         name: "exit",
