@@ -24,7 +24,7 @@ export default function InputBar({ onSubmit, disabled = false }: Props) {
   const textareaRef = useRef<TextareaRenderable>(null);
   const onSubmitRef = useRef<() => void>(() => {});
   const renderer = useRenderer();
-  const toast = useToast()
+  const toast = useToast();
 
   const {
     showCommandMenu,
@@ -60,7 +60,8 @@ export default function InputBar({ onSubmit, disabled = false }: Props) {
       if (command.action) {
         textarea.setText("");
         command.action({
-          exit: () => renderer.destroy(), toast,
+          exit: () => renderer.destroy(),
+          toast,
         });
       } else {
         textarea.setText("");

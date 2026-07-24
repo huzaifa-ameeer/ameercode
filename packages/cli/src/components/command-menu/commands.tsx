@@ -1,103 +1,103 @@
-import type { Command } from "./types"
+import type { Command } from "./types";
 
-export const COMMANDS : Command[] =[
-    {
-        name: "new",
-        description: "Start a new conversation",
-        value: "/new",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Starting new converstion..."
-            })
-        }
+export const COMMANDS: Command[] = [
+  {
+    name: "new",
+    description: "Start a new conversation",
+    value: "/new",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Starting new converstion...",
+      });
     },
-    {
-        name: "usage",
-        description: "Open billing portal in yoir browser",
-        value: "/usage",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Opening billing portal..."
-            })
-        }
+  },
+  {
+    name: "usage",
+    description: "Open billing portal in yoir browser",
+    value: "/usage",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Opening billing portal...",
+      });
     },
-    {
-        name: "upgrade",
-        description: "Buy more credits",
-        value: "/upgrade",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Opening credits checkout..."
-            })
-        }
+  },
+  {
+    name: "upgrade",
+    description: "Buy more credits",
+    value: "/upgrade",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Opening credits checkout...",
+      });
     },
-    {
-        name: "logout",
-        description: "Sign out of your account",
-        value: "/logout",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Signed out",
-                variant: "success"
-            })
-        }
+  },
+  {
+    name: "logout",
+    description: "Sign out of your account",
+    value: "/logout",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Signed out",
+        variant: "success",
+      });
     },
-    {
-        name: "login",
-        description: "Sign in with your browser",
-        value: "/login",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Opening browser to sign in..."
-            })
-        }
+  },
+  {
+    name: "login",
+    description: "Sign in with your browser",
+    value: "/login",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Opening browser to sign in...",
+      });
     },
-    {
-        name: "theme",
-        description: "Change color theme",
-        value: "/theme",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Opening theme picker..."
-            })
-        }
+  },
+  {
+    name: "theme",
+    description: "Change color theme",
+    value: "/theme",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Opening theme picker...",
+      });
     },
-    {
-        name: "sessions",
-        description: "Browse past sessions",
-        value: "/sessions",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Loading sessions..."
-            })
-        }
+  },
+  {
+    name: "sessions",
+    description: "Browse past sessions",
+    value: "/sessions",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Loading sessions...",
+      });
     },
-    {
-        name: "models",
-        description: "Select AI model for generation",
-        value: "/models",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Selecting models..."
-            })
-        }
+  },
+  {
+    name: "models",
+    description: "Select AI model for generation",
+    value: "/models",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Selecting models...",
+      });
     },
-    {
-        name: "agents",
-        description: "Switch agents",
-        value: "agents",
-        action: (ctx)=>{
-            ctx.toast.show({
-                message: "Switching agents..."
-            })
-        }
+  },
+  {
+    name: "agents",
+    description: "Switch agents",
+    value: "agents",
+    action: (ctx) => {
+      ctx.toast.show({
+        message: "Switching agents...",
+      });
     },
-    {
-        name: "exit",
-        description: "Quit the application",
-        value: "/exit",
-        action: (ctx)=>{
-            ctx.exit()
-        }
-    }
-]
+  },
+  {
+    name: "exit",
+    description: "Quit the application",
+    value: "/exit",
+    action: (ctx) => {
+      ctx.exit();
+    },
+  },
+];
